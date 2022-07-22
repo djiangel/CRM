@@ -1,0 +1,90 @@
+.quotation-grid .details-col {
+    grid-area: details;
+}
+
+.quotation-grid .activity-col {
+    grid-area: activities;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.quotation-grid .items-col {
+    grid-area: items;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+}
+
+.quotation-grid .workflow-col {
+    grid-area: workflow;
+}
+
+.quotation-grid .ant-card-body {
+    overflow: auto;
+}
+
+.quotation-grid .quotation-tabs-col {
+    background: #fff;
+}
+
+.quotation-grid .quotation-tabs-col .ant-tabs {
+    padding: 0 10px;
+}
+
+.quotation-grid .MuiTableBody-root {
+    overflow: auto;
+}
+
+.quotation-grid {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 100%;
+    grid-template-areas: 'details' 'tabs';
+    grid-gap: 10px;
+}
+
+.quotation-grid .quotation-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 5px
+}
+
+.quotation-detail-grid div span {
+    margin-right: 5px;
+}
+
+.quotation-grid .items-col .ant-card-head {
+    background: #FF3333;
+    color: #fff;
+}
+
+.quotation-grid .activity-col .ant-card-head {
+    background: #337CFF;
+    color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .quotation-grid {
+        display: grid;
+        grid-template-rows: auto 1fr minmax(0, calc(100vh - 110px));
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'details details' 'items items' 'workflow activities'; 
+        grid-gap: 10px;
+    }
+    
+}
+
+@media only screen and (min-width: 992px) {
+
+    .quotation-grid {
+        height: calc(100vh - 110px);
+        display: grid;
+        grid-template-rows: auto minmax(0, 1fr) minmax(0, 3fr);
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 'details activities' 'items activities' 'items workflow';
+        grid-gap: 10px;
+    }
+
+}

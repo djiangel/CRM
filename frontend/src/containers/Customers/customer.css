@@ -1,0 +1,296 @@
+.customer-grid .details-col {
+    grid-area: details;
+}
+
+.customer-grid .analytics-col {
+    grid-area: analytics;
+    background: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.customer-grid .analytics-col {
+    grid-area: analytics;
+    background: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.customer-grid .customer-tabs-col {
+    grid-area: tabs;
+    background: #fff;
+}
+
+.customer-grid .ant-tabs {
+    padding: 0 10px;
+}
+
+.customer-grid .analytics-col .ant-tabs {
+    margin-bottom: 20px;
+}
+
+.customer-grid .poc-col {
+   grid-area: poc;
+   overflow: auto;
+   display: flex;
+   flex-direction: column;
+}
+
+.customer-grid .customer-projects-col {
+    grid-area: projects;
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-grid .spot-order-col {
+    grid-area: spot;
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-grid .project-based-col {
+    grid-area: project;
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-grid .customer-ticket-col {
+    grid-area: tickets;
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-grid .activity-col {
+    grid-area: activity;
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-grid .calendar-col {
+    grid-area: calendar;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.customer-grid .calendar-col .ant-card-body {
+    flex: 1;
+}
+
+.customer-grid .statistics-col {
+    grid-area: statistics;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 5px
+}
+
+.customer-grid .statistics-col > div {
+    flex-grow: 1;
+}
+
+.customer-grid .chart-col {
+    grid-area: chart;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-grid .swipeable-analytics {
+    flex-grow: 1;
+}
+
+.customer-grid .react-swipeable-view-container {
+    height: 100% !important;
+}
+
+.customer-grid .chart-col .ant-tabs {
+    padding-bottom: 20px;
+}
+
+.customer-grid .analytics-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 10px;
+}
+
+.customer-grid .analytics-stats > div {
+    box-shadow: 5px 5px 5px #f2f2f2;
+} 
+
+.customer-grid .poc-flexbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-grid .poc-flexbox .anticon {
+    margin-right: 5px;
+}
+
+.customer-grid .customer-projects-flexbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-grid .customer-projects-flexbox .anticon {
+    margin-right: 5px;
+}
+
+.customer-grid .customer-customer-id {
+    grid-area: id;
+}
+
+.customer-grid .customer-phone-number {
+    grid-area: telephone;
+}
+
+.customer-grid .customer-fax-number {
+    grid-area: fax;
+}
+
+.customer-grid .customer-inc-country {
+    grid-area: country;
+}
+
+.customer-grid .customer-button {
+    grid-area: button;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.customer-grid .customer-detail-grid > div > .anticon {
+    margin-right: 5px;
+}
+
+.customer-grid .statistics-col .ant-statistic-content {
+    font-size: 20px;
+}
+
+.customer-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 50vh auto;
+    grid-gap: 10px;
+    grid-template-areas: "details" "analytics" "tabs";
+}
+
+/* .customer-grid .customer-chart {
+    height: 100%;
+    grid-area: chart;
+    background: #fff;
+} */
+
+.customer-grid .chart-col .ant-tabs-nav {
+    padding: 0 10px;
+}
+
+.customer-grid .customer-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "id" "telephone" "fax" "country";
+    row-gap: 5px;
+}
+
+.customer-grid .ant-card-body {
+    overflow: auto;
+}
+
+.customer-grid .activity-col > .ant-card-head {
+    background: #337CFF;
+    color: #fff;
+}
+
+.customer-grid .customer-projects-col > .ant-card-head {
+    background: #FF3333;
+    color: #fff;
+}
+
+.customer-grid .poc-col > .ant-card-head {
+    background: #FFB133;
+    color: #fff;
+}
+
+.customer-grid .spot-order-col > .ant-card-head {
+    background: #9325FF;
+    color: #fff;
+}
+
+.customer-grid .project-based-col > .ant-card-head {
+    background: #29A329;
+    color: #fff;
+}
+
+.customer-grid .customer-ticket-col > .ant-card-head {
+    background: #494949;
+    color: #fff;
+}
+
+.customer-grid .calendar-col > .ant-card-head {
+    background: #EE8313 ;
+    color: #fff;
+}
+
+.customer-grid .workflow-col > .ant-card-head {
+    background: #FF6699 ;
+    color: #fff;
+}
+
+.customer-grid .poc-update-button {
+    margin-top: 15px;
+}
+
+.customer-grid .stats-chart .ant-tabs {
+    padding-bottom: 20px;
+}
+
+.customer-grid .swipeable-analytics {
+    flex-grow: 1;
+}
+
+.customer-grid .react-swipeable-view-container {
+    height: 100% !important;
+}
+
+.customer-grid .workflow-col {
+    display: flex;
+    flex-flow: column;
+    background: #fff;
+}
+
+.customer-grid .workflow-col .ant-card-body {
+    overflow: hidden;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+    .customer-grid {
+        display: block;
+    }
+
+    .customer-grid .customer-detail-grid {
+        display: grid;
+        grid-template-columns: 1fr minmax(auto, 1fr);
+        grid-template-rows: auto auto;
+        grid-template-areas: "id telephone" "country fax";
+        row-gap: 10px;
+    }
+
+    .customer-grid .chart-col .ant-tabs {
+        height: 100%;
+    }
+
+    .customer-grid .chart-col .ant-tabs-content {
+        height: 100%;
+    }
+
+    .customer-grid .ant-page-header {
+        height: 100%;
+    }
+
+
+}

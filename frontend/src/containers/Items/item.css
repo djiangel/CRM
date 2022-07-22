@@ -1,0 +1,47 @@
+
+
+.item-grid .item-detail-grid .anticon {
+    margin-right: 5px;
+} 
+
+.item-grid {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-template-areas: "details" "competitor-item";
+}
+
+.item-grid .item-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 5px
+}
+
+@media only screen and (min-width: 768px) {
+
+    .item-grid .competitor-item-col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item-grid .competitor-item-col .ant-card-head {
+    background: #337CFF;
+    color: #fff;
+    }
+
+    .item-grid .competitor-item-col .ant-card-body {
+        overflow: auto;
+    }
+
+    .item-grid {
+        height: calc(100vh - 110px);
+        display: grid;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        grid-template-areas: "details" "competitor-item"
+    }
+
+}

@@ -1,0 +1,167 @@
+
+.ticket-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    row-gap: 10px;
+    grid-template-areas: "header" "tabs";
+}
+
+.ticket-grid .detail-col {
+    grid-area: details;
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket-grid .header-col {
+    grid-area: header;
+}
+
+.ticket-grid .conversations-col {
+    grid-area: conversations;
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket-grid .activities-col {
+    grid-area: activities;
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket-grid .ant-card-body {
+    overflow: auto;
+}
+
+.ticket-grid .detail-col .ant-card-head {
+    background: #337CFF;
+    color: #fff;
+}
+
+.ticket-grid .conversations-col .ant-card-head {
+    background: #FF3333;
+    color: #fff;
+}
+
+.ticket-grid .activities-col .ant-card-head {
+    background: #FFB133;
+    color: #fff;
+}
+
+.ticket-grid .tabs-col {
+    background: #fff;
+}
+
+.ticket-grid .tabs-col .ant-tabs {
+    padding: 0 10px;
+}
+
+.ticket-grid .ticket-header-description {
+    grid-area: description
+}
+
+.ticket-grid .ticket-header-created {
+    grid-area: created
+}
+
+.ticket-grid .ticket-header-updated {
+    grid-area: updated
+}
+
+.ticket-grid .ticket-customer-child {
+    margin: 10px 0;
+}
+
+.ticket-grid .ticket-project-child {
+    margin: 10px 0;
+}
+
+.ticket-grid .ticket-detail-child {
+    margin: 10px 0;
+}
+
+.ticket-detail-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(0, 300px));
+    grid-auto-rows: auto;
+    grid-gap: 5px;
+}
+
+.ticket-customer-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(0, 300px));
+    grid-auto-rows: auto;
+    grid-gap: 5px;
+}
+
+.ticket-project-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(0, 300px));
+    grid-auto-rows: auto;
+    grid-gap: 5px;
+}
+
+.ticket-detail-flex {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(0, 300px));
+    grid-auto-rows: auto;
+    grid-gap: 5px;
+    margin-bottom: 10px;
+}
+
+.ticket-detail-child .ticket-detail-title {
+    margin-top: 10px;
+}
+
+.ticket-detail-child .ticket-detail-email {
+    align-self: center;
+}
+
+.ticket-header-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-gap: 10px;
+    grid-template-areas: "description" "created" "updated"
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    .ticket-grid {
+        height: calc(200vh - 160px);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr 1fr;
+        row-gap: 10px;
+        column-gap: 10px;
+        grid-template-areas: "header header" "details conversations" "activities conversations";
+    }
+
+    .ticket-header-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        grid-gap: 10px;
+        grid-template-areas: "description description" "created updated"
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .ticket-grid {
+        height: calc(200vh - 180px);
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: auto minmax(0, auto) minmax(0, calc(100vh - 80px));
+        row-gap: 10px;
+        column-gap: 10px;
+        grid-template-areas: "header activities" "details details" "conversations conversations";
+    }
+
+}
+

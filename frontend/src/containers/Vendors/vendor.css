@@ -1,0 +1,153 @@
+.vendor-grid .details-col {
+    grid-area: details;
+}
+
+.vendor-grid .vendor-tabs-col {
+    grid-area: tabs;
+    background: #fff;
+}
+
+.vendor-grid .ant-tabs {
+    padding: 0 10px;
+}
+
+.vendor-grid .poc-col {
+   grid-area: poc;
+   overflow: auto;
+   display: flex;
+   flex-direction: column;
+}
+
+.vendor-grid .items-col {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+ }
+
+.vendor-grid .activity-col {
+    grid-area: activity;
+    display: flex;
+    flex-direction: column;
+}
+
+.vendor-grid .swipeable-analytics {
+    flex-grow: 1;
+}
+
+.vendor-grid .react-swipeable-view-container {
+    height: 100% !important;
+}
+
+.vendor-grid .poc-flexbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.vendor-grid .poc-flexbox .anticon {
+    margin-right: 5px;
+}
+
+.vendor-grid .vendor-vendor-id {
+    grid-area: id;
+}
+
+.vendor-grid .vendor-phone-number {
+    grid-area: telephone;
+}
+
+.vendor-grid .vendor-fax-number {
+    grid-area: fax;
+}
+
+.vendor-grid .vendor-country {
+    grid-area: country;
+}
+
+.vendor-grid .vendor-detail-grid > div > .anticon {
+    margin-right: 5px;
+}
+
+.vendor-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+    grid-template-areas: "details" "tabs";
+}
+
+.vendor-grid .vendor-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "id" "telephone" "fax" "country";
+    row-gap: 5px;
+}
+
+.vendor-grid .ant-card-body {
+    overflow: auto;
+}
+
+.vendor-grid .activity-col > .ant-card-head {
+    background: #337CFF;
+    color: #fff;
+}
+
+.vendor-grid .poc-col > .ant-card-head {
+    background: #FFB133;
+    color: #fff;
+}
+
+.vendor-grid .workflow-col > .ant-card-head {
+    background: #FF3333;
+    color: #fff;
+}
+
+.vendor-grid .items-col > .ant-card-head {
+    background: #29A329;
+    color: #fff;
+}
+
+.vendor-grid .poc-update-button {
+    margin-top: 15px;
+}
+
+.vendor-grid .workflow-col {
+    display: flex;
+    flex-flow: column;
+    background: #fff;
+}
+
+.vendor-grid .workflow-col .ant-card-body {
+    overflow: hidden;
+}
+
+.vendor-grid .calendar-col {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.vendor-grid .calendar-col > .ant-card-body{
+    flex: 1;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    .vendor-grid {
+        display: block;
+    }
+
+    .vendor-grid .vendor-detail-grid {
+        display: grid;
+        grid-template-columns: 1fr minmax(auto, 1fr);
+        grid-template-rows: auto auto;
+        grid-template-areas: "id telephone" "country fax";
+        row-gap: 10px;
+    }
+
+    .vendor-grid .ant-page-header {
+        height: 100%;
+    }
+
+
+}

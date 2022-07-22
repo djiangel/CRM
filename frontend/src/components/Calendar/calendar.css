@@ -1,0 +1,54 @@
+
+.calendar-toolbar-grid {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "dates menu-more" "title title";
+    grid-gap: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .calendar-toolbar-grid {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "dates title menu-more";
+        grid-gap: 5px;
+    }
+
+}
+
+.calendar-toolbar-navigate-dates {
+    grid-area: dates;
+}
+
+.calendar-toolbar-date-title {
+    grid-area: title;
+    justify-self: center;
+    align-self: center;
+    font-weight: bold;
+}
+
+.calendar-toolbar-menu-more {
+    grid-area: menu-more;
+}
+
+.rbc-calendar {
+    overflow: auto;
+    height: 100%;
+}
+
+.rbc-calendar .rbc-event-label {
+    width: 100%;
+}
+
+.rbc-calendar .rbc-event-content {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.rbc-calendar .rbc-events-container {
+    margin-right: 0px;
+}

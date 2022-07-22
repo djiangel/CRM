@@ -1,0 +1,464 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+.ant-dropdown-menu-item {
+    padding: 0;
+    margin: 0 5px;
+}
+
+.ant-dropdown-menu-item .ant-btn {
+    padding: 5px 12px;
+}
+
+.flex-horizontal-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.align-right {
+    margin-left: auto;
+}
+
+.flex-vertical-popover {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.flex-popover-tag-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.flex-popover-tag-child {
+    margin-top: 5px;
+}
+
+.project-m2m-items {
+    align-self: center;
+    max-width: 10vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.activity-text {
+    align-self: center;
+}
+
+.project-grid .MuiTableBody-root > tr :hover {
+    background: none;
+}
+
+/* main grid and grid items */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 50vh auto;
+    row-gap: 10px;
+    grid-template-areas: "card" "analytics" "tabs";
+}
+
+.project-grid .analytics-stats .ant-statistic-content {
+    font-size: 20px;
+}
+
+.project-grid .swipeable-analytics {
+    flex-grow: 1;
+}
+
+.project-grid .react-swipeable-view-container {
+    height: 100% !important;
+}
+
+.project-grid .card-col {
+    grid-area: card;
+}
+
+.project-grid .analytics-col {
+    grid-area: analytics;
+    background: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.project-grid .analytics-col .ant-tabs {
+    padding: 0 10px;
+}
+
+.project-grid .tabs-col {
+    grid-area: tabs;
+    background: #fff;
+}
+
+.project-grid .tabs-col .ant-tabs {
+    padding: 0 10px;
+}
+
+.project-grid .forecast-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-grid .forecast-box .ant-card-body {
+    flex: 1;
+}
+
+.project-grid .ant-card-body {
+    overflow: auto;
+}
+
+.project-grid .ant-card-actions {
+    margin-top: auto;
+}
+
+.project-grid .analytics-col .ant-tabs-mobile {
+    margin-bottom: 10px;
+}
+
+/* new project detail grid */
+
+.project-grid .project-detail-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "id button" "customer customer" "department department" "user user";
+    row-gap: 10px;
+}
+
+.project-grid .details-project-id {
+    grid-area: id;
+    align-self: center;
+}
+
+.project-grid .details-button {
+    grid-area: button;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.project-grid .details-update {
+    margin-right: 5px;
+}
+
+.project-grid .details-customer {
+    grid-area: customer;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.project-grid .details-customer-title {
+    margin-right: 5px;
+    align-self: center;
+}
+
+.project-grid .details-customer-item {
+    align-self: center;
+    max-width: 10vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.project-grid .details-department {
+    grid-area: department;
+    align-self: center;
+}
+
+.project-grid .details-user {
+    grid-area: user;
+    display: flex;
+    flex-direction: row;
+}
+
+.project-grid .details-user-title {
+    margin-right: 5px;
+    align-self: center;
+}
+
+.project-grid .details-user-item {
+    align-self: center;
+}
+
+.project-grid .project-detail-grid > div > .anticon {
+    margin-right: 5px;
+}
+
+.project-grid .project-detail-grid > div > span > .anticon {
+    margin-right: 5px;
+}
+
+/* calendar grid */
+
+.project-grid .calendar-box {
+    grid-area: calendar;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+}
+
+.project-grid .calendar-box .ant-card-body{
+    flex: 1;
+}
+
+/* workflow grid */
+
+.project-grid .workflow-box {
+    grid-area: workflow;
+    display: flex;
+    flex-flow: column;
+    background: #fff;
+}
+
+.project-grid .workflow-box .ant-card-body {
+    overflow: hidden;
+}
+
+/* activity flexbox */
+
+.project-grid .activity-text-flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.project-grid .activity-personnel-flex {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+
+.project-grid .activity-text-flex div:first-of-type {
+    margin-right: 5px;
+}
+
+/* requirement grid and grid items */
+
+.project-grid .requirement-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "title button" "description button";
+}
+
+.project-grid .requirement-title {
+    grid-area: title;
+    align-self: center;
+}
+
+.project-grid .requirement-grid > p > .anticon {
+    margin-right: 5px;
+}
+
+.project-grid .requirement-description {
+    grid-area: description;
+    align-self: center;
+}
+
+.project-grid .requirement-button {
+    grid-area: button;
+    justify-self: end;
+    align-self: center;
+}
+
+/* revenue forecast grid */
+
+.project-grid .forecast-box {
+    grid-area: forecast;
+    background: #fff;
+}
+
+.project-grid .forecast-box .ant-card-body {
+    flex: 1;
+    overflow: hidden;
+}
+
+/* pure css without grid */
+
+.timeline-date {
+    font-size: 10px;
+}
+
+.profile-picture-timeline {
+    margin-top: 1%;
+    padding: 1%;
+}
+
+.ant-card {
+    border-radius: 5px;
+}
+
+.project-grid .activities-box {
+    grid-area: activities;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-grid .requirements-box {
+    grid-area: requirements;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-grid .items-box {
+    grid-area: items;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-grid .quotations-box {
+    grid-area: quotations;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-grid .notations-box {
+    grid-area: notations;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-grid .ticket-box {
+    grid-area: tickets;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-grid .forecast-box .ant-card-head {
+    background: #31ADAF;
+    color: #fff;
+}
+
+.project-grid .activities-box > .ant-card-head {
+    background: #337CFF;
+    color: #fff;
+}
+
+.project-grid .requirements-box > .ant-card-head {
+    background: #FF3333;
+    color: #fff;
+}
+
+.project-grid .items-box > .ant-card-head {
+    background: #29A329;
+    color: #fff;
+}
+
+.project-grid .quotations-box > .ant-card-head {
+    background: #FFB133;
+    color: #fff;
+}
+
+.project-grid .notations-box > .ant-card-head {
+    background: #494949;
+    color: #fff;
+}
+
+.project-grid .ticket-box > .ant-card-head {
+    background: #9325FF;
+    color: #fff;
+}
+
+.project-grid .calendar-box > .ant-card-head {
+    background: #EE8313 ;
+    color: #fff;
+}
+
+.project-grid .workflow-box > .ant-card-head {
+    background: #FF6699 ;
+    color: #fff;
+}
+
+.project-grid .calendar-box {
+    height: 100%;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    .project-grid {
+        display: block;
+    }
+
+    .project-m2m-items {
+        max-width: 5vw;
+    }
+
+    .project-grid .details-customer-item {
+        max-width: 5vw;
+    }
+
+    
+    .ant-drawer-body .MuiPaper-elevation4 {
+        box-shadow: none !important;
+    }
+
+    .ant-card-body .MuiPaper-elevation4 {
+        box-shadow: none !important;
+    }
+   
+    .project-grid .project-detail-grid {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr minmax(auto, 1fr);
+        grid-template-rows: auto auto;
+        grid-template-areas: "id customer" "department user";
+        row-gap: 10px;
+    }
+
+    .project-grid .ant-page-header {
+        height: 100%;
+        display: flex;
+        flex-flow: column
+    }
+
+    .project-grid .ant-page-header-content {
+        flex: 1;
+    }
+
+    .react-grid-layout {
+        height: calc(100vh - 110px);
+    }
+
+    /*.project-grid .items-box {
+        display: flex;
+    }
+
+    .project-grid .items-box .ant-card-body {
+        overflow: hidden;
+        flex: 1 1;
+    }
+
+    .project-grid .items-box .MuiPaper-root {
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100%;
+    }
+
+    .project-grid .items-box .MuiToolbar-root {
+        display: block;
+    }
+
+    .project-grid .items-box .MuiTableBody-root {
+        overflow: auto;
+        flex: 1;
+    }*/
+
+
+}
+
+
+
+
+

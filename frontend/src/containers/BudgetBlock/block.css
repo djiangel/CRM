@@ -1,0 +1,53 @@
+.block-grid .block-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 5px
+}
+
+.block-detail-grid div span {
+    margin-right: 5px;
+}
+
+.block-grid {
+    height: calc(100vh - 110px);
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    grid-template-columns: 1fr minmax(0, 1fr);
+    grid-template-areas: 'details details' 'activities workflow';
+    grid-gap: 10px;
+}
+
+.block-grid .details-col {
+    grid-area: details;
+}
+
+.block-grid .activity-col {
+    grid-area: activities;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.block-grid .workflow-col {
+    grid-area: workflow;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.block-grid .workflow-col .ant-card-body {
+    overflow: hidden;
+}
+
+.block-grid .ant-card-body {
+    overflow: auto;
+}
+
+.block-grid .activity-col .ant-card-head {
+    background: #337CFF;
+    color: #fff;
+}
+
+.block-grid .workflow-col .ant-card-head {
+    background: #FF3333;
+    color: #fff;
+}

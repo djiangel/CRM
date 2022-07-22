@@ -1,0 +1,336 @@
+#geo-chart {
+    display: block;
+    width: 100%;
+    height: 300px;
+  }
+  
+  svg .country:hover {
+    stroke: black;
+    stroke-width: 1px;
+    cursor: pointer;
+  }
+
+  .analytics-grid {
+    display: grid;
+    width: 100%;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: 100%;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-areas: "kpi" "calendar" "conversion" "est-rev" "act-rev"
+  }
+
+  .analytics-grid .calendar-box {
+    display: flex;
+    flex-flow: column nowrap;
+
+  }
+
+  .analytics-grid .calendar-box .ant-card-body {
+    flex: 1;
+  }
+
+  .stats-grid {
+    display: grid;
+    height: 100%;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas: "lead-count lead-kpi" "conversion-rate conversion-kpi" "client-count lead-progress" "revenue-count revenue-count" "revenue-kpi revenue-progress" "project-count ticket-count"
+  }
+  
+  .kpi-box {
+    grid-area: kpi;
+  }
+  
+  .calendar-box {
+    grid-area: calendar;
+    padding: 20px;
+  }
+  
+  .conversion-box {
+    grid-area: conversion;
+    padding: 20px;
+  }
+
+  .est-rev-box {
+    grid-area: est-rev;
+    padding: 20px;
+  }
+  
+  .act-rev-box {
+    grid-area: act-rev;
+    padding: 20px;
+  }
+  
+  .source-box {
+    grid-area: source;
+    padding: 20px;
+  }
+  
+  .country-box {
+    grid-area: country;
+    padding: 20px;
+  }
+
+  .project-conversion-box {
+    grid-area: project-count;
+    padding: 20px;
+  }
+
+  .ticket-conversion-box {
+    grid-area: ticket-count;
+    padding: 20px;
+  }
+
+  .analytics-grid > div {
+    background: #fff;
+  }
+
+  .stats-lead-count {
+    grid-area: lead-count;
+  }
+
+  .stats-lead-kpi {
+    grid-area: lead-kpi;
+  }
+
+  .stats-conversion-rate {
+    grid-area: conversion-rate;
+  }
+
+  .stats-conversion-kpi {
+    grid-area: conversion-kpi;
+  }
+
+  .stats-client-count {
+    grid-area: client-count;
+  }
+
+  .stats-lead-progress {
+    grid-area: lead-progress;
+  }
+
+  .stats-revenue-count {
+    grid-area: revenue-count;
+  }
+
+  .stats-revenue-kpi {
+    grid-area: revenue-kpi;
+  }
+
+  .stats-revenue-progress {
+    grid-area: revenue-progress;
+  }
+
+  .kpi-box > .ant-tabs {
+    background: #f2f2f2;
+  }
+
+  .kpi-box > div {
+    background: #f2f2f2;
+  }
+
+  .customer-converted-daily-bar {
+    position: relative;
+    margin: auto;
+    width: 80vw;
+    height: 50vh;
+  }
+
+  .customer-converted-bar {
+    position: relative;
+    margin: auto;
+    width: 80vw;
+    height: 30vh;
+  }
+
+  .customer-converted-line {
+    position: relative;
+    margin: auto;
+    width: 80vw;
+    height: 20vh;
+  }
+
+  .est-rev-bar {
+    position: relative;
+    margin: auto;
+    width: 80vw;
+    height: 30vh;
+  }
+
+  .est-rev-line {
+    position: relative;
+    margin: auto;
+    width: 80vw;
+    height: 20vh;
+  }
+
+  .act-rev-bar {
+    position: relative;
+    margin: auto;
+    width: 80vw;
+    height: 30vh;
+  }
+
+  .act-rev-line {
+    position: relative;
+    margin: auto;
+    width: 80vw;
+    height: 20vh;
+  }
+
+  .customer-source-pie {
+    position: relative;
+    margin: auto;
+    width: 80vw;
+    height: 50vh;
+  }
+
+  .select-grid {
+    display: grid;
+    width: 100%;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+    grid-template-areas: "metric-title start-title end-title" "metric start end";
+  }
+
+  .select-metric-title {
+    grid-area: metric-title;
+  }
+
+  .select-start-title {
+    grid-area: start-title;
+  }
+
+  .select-end-title {
+    grid-area: end-title;
+  }
+
+  .metric-select {
+    grid-area: metric;
+  }
+
+  .start-select {
+    grid-area: start;
+  }
+
+  .end-select {
+    grid-area: end;
+  }
+
+  .select-grid .ant-select {
+    width: 100%;
+  } 
+
+  .analytics-stuff {
+    height: 60vh;
+  }
+
+  .calendar-box .ant-card-body {
+    padding: 0;
+  }
+
+
+@media only screen and (min-width: 992px) {
+
+  .analytics-grid {
+    height: calc(150vh - 90px);
+    width: calc(100vw - 80px - 2%);
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-areas: "kpi kpi" "calendar conversion" "est-rev act-rev" "source country" "project-count ticket-count"
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    grid-template-areas: "lead-count lead-kpi conversion-rate conversion-kpi revenue-count revenue-kpi" 
+                         "client-count lead-progress lead-progress lead-progress revenue-progress revenue-progress"
+  }
+
+  .customer-converted-daily-bar {
+    position: relative;
+    margin: auto;
+    width: 40vw;
+    height: 50vh;
+  }
+
+  .customer-converted-bar {
+    position: relative;
+    margin: auto;
+    width: 40vw;
+    height: 30vh;
+  }
+
+  .customer-converted-line {
+    position: relative;
+    margin: auto;
+    width: 40vw;
+    height: 20vh; 
+  }
+
+  .est-rev-bar {
+    position: relative;
+    margin: auto;
+    width: 40vw;
+    height: 30vh;
+  }
+
+  .est-rev-line {
+    position: relative;
+    margin: auto;
+    width: 40vw;
+    height: 20vh;
+  }
+
+  .act-rev-bar {
+    position: relative;
+    margin: auto;
+    width: 40vw;
+    height: 30vh;
+  }
+
+  .act-rev-line {
+    position: relative;
+    margin: auto;
+    width: 40vw;
+    height: 20vh;
+  }
+
+  .customer-source-pie {
+    position: relative;
+    margin: auto;
+    width: 40vw;
+    height: 50vh;
+  }
+
+  .analytics-stuff {
+    height: 60vh;
+  }
+
+  .analytics-grid .ant-empty {
+    height: 50% !important;
+  }
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+  .stats-grid {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    grid-template-areas: "lead-count lead-kpi conversion-rate conversion-kpi client-count revenue-count revenue-kpi" 
+                         "lead-progress lead-progress lead-progress lead-progress lead-progress revenue-progress revenue-progress"
+  }
+
+}
